@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity dashboard</title>
+    <link rel="icon" type="image/png" href="./apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <section class="allelems">
+            <div class="todo elems" id="0">
+                <h1>To-do list</h1>
+                <img src="https://plus.unsplash.com/premium_photo-1681487870238-4a2dfddc6bcb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dG8lMjBkbyUyMGxpc3R8ZW58MHx8MHx8fDA%3D"
+                    alt="">
+            </div>
+            <div class="dailyPlanner elems" id="1">
+                <h1>Daily Planner</h1>
+                <img src="https://images.unsplash.com/photo-1692158961562-cb06d93fb63c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGRhaWx5JTIwcGxhbm5lcnxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="">
+            </div>
+            <div class="motivation elems" id="2">
+                <h1> Quotes</h1>
+                <img src="https://images.unsplash.com/photo-1569229569803-69384f5efa83?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW90aXZhdGlvbiUyMGNhcmQlMjBpbWFnZXxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="">
+            </div>
+            <div class="pomodoro elems" id="3">
+                <h1>Pomodoro Timer</h1>
+                <img src="https://images.unsplash.com/photo-1513544705284-99373737fab6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cG9tb2Rvcm98ZW58MHx8MHx8fDA%3D"
+                    alt="">
+            </div>
+        </section>
+        <section class="fullElem to-do-list-fullpage">
+            <h1>Your Personalized Task List</h1>
+            <button class="back" id="0">Close</button>
+            <div class="container">
+                <div class="addTask">
+                    <form>
+                        <input id="task-input" type="text" placeholder="Enter Task">
+                        <textarea placeholder="Enter Details" name="" id=""></textarea>
+                        <div class="mark-imp">
+                            <input type="checkbox" id="check">
+                            <label for="check">Mark as Important</label>
+                        </div>
+                        <button>Add Task</button>
+                    </form>
+                </div>
+                <div class="allTask">
+                  
+                </div>
+            </div>
+        </section>
+        <section class="fullElem daily-planner-fullpage">
+            <h1>Daily Planner</h1>
+            <button class="back" id="1">Close</button>
+        </section>
+        <section class="fullElem motivational-quotes-fullpage">
+            <h1>Motivational Quotes</h1>
+            <button class="back" id="2">Close</button>
+        </section>
+        <section class="fullElem pomodoro-timer-fullpage">
+            <h1>Pomodoro Timer</h1>
+            <button class="back" id="3">Close</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
