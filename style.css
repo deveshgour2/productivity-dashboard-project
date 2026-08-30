@@ -1,6 +1,6 @@
 :root {
     --pri: #0F172A;
-    --sec: #1E293B;
+    --sec: #233c64;
     --tri1: #F8FAFC;
     --tri2: #94A3B8;
 }
@@ -293,7 +293,7 @@ section.allelems {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap ;
+    flex-wrap: wrap;
     overflow: auto;
     flex-shrink: none;
 }
@@ -326,4 +326,89 @@ section.allelems {
     padding-top: 20px;
     font-size: 25px;
     color: var(--tri1);
+}
+
+.motivational-fullpage {
+    display: block;
+
+}
+
+.motivational-fullpage h1 {
+    font-size: 45px;
+    font-weight: 700;
+    font-family: aeonik;
+}
+
+.motivational-fullpage .motivation-container {
+    height: 500px;
+    width: 700px;
+    background-color: var(--tri2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+
+}
+
+.motivational-fullpage .motivation-container::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--sec);
+    border-radius: 50px;
+    scale: 1.1;
+    z-index: 6;
+    filter: blur(150px);
+}
+
+.motivational-fullpage .motivation-container .motivation-wrapper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    background-color: var(--tri2);
+    border-radius: 40px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 3px solid var(--pri);
+}
+
+.motivation-wrapper .motivation-1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.motivation-wrapper .motivation-1 h2 {
+    font-size: 35px;
+    font-weight: 500;
+    padding: 20px;
+    background-color: var(--sec);
+    border-radius: 20px;
+}
+
+.motivation-wrapper .motivation-2 h1 {
+    font-size: 40px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+
+.motivation-wrapper .motivation-3 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.motivation-wrapper .motivation-3 h2 {
+    font-size: 35px;
+    font-weight: 500;
+    background-color: var(--sec);
+    padding: 20px;
+    border-radius: 20px;
 }
