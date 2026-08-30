@@ -211,6 +211,8 @@ section.allelems {
     height: 100%;
     background-color: var(--tri2);
     padding: 20px;
+    overflow: auto;
+    scrollbar-width: thin;
 }
 
 .allTask .task{

@@ -29,14 +29,14 @@ function todoList() {
     }
     function renderTask() {
 
-        let allTask = document.querySelector('.allTask')
+        var allTask = document.querySelector('.allTask')
         let sum = ''
         currentTask.forEach(function (elem, idx) {
             sum = sum + ` <div class="task">
                         <h5>${elem.task}
                              <span class="${elem.imp}">imp</span>
                         </h5>
-                        <button id=${idx}">Mark as Completed</button>
+                        <button id=${idx}>Mark as Completed</button>
                     </div>`
         })
         allTask.innerHTML = sum
@@ -61,11 +61,12 @@ function todoList() {
 
     form.addEventListener('submit', function (e) {
         e.preventDefault()
-        currentTask.push({
-            task: taskInput.value,
-            details: taskDetailInput.value,
-            imp: taskCheckbox.checked
-        })
+        currentTask.push(
+            {
+                task: taskInput.value,
+                details: taskDetailInput.value,
+                imp: taskCheckbox.checked
+            })
         renderTask();
         taskCheckbox.checked = false
         taskInput.value = ''
