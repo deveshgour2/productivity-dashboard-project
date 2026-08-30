@@ -120,7 +120,8 @@ section.allelems {
     justify-content: space-between;
 
 }
-.to-do-list-fullpage h1{
+
+.to-do-list-fullpage h1 {
     font-size: 45px;
     font-weight: 700;
     font-family: aeonik;
@@ -161,7 +162,7 @@ section.allelems {
     background-color: var(--sec);
     padding: 15px 30px;
     font-size: 27px;
-     font-family: aeonik;
+    font-family: aeonik;
     font-weight: 500;
     border: none;
     border-radius: 5px;
@@ -182,27 +183,30 @@ section.allelems {
     outline: none;
     margin-bottom: 20px;
     transition: all ease 0.3s;
-     font-family: aeonik;
+    font-family: aeonik;
     font-weight: 500;
 }
 
 .container .addTask form button:active {
     scale: 0.96;
 }
-.container .addTask .mark-imp{
+
+.container .addTask .mark-imp {
     display: flex;
     justify-items: center;
     align-items: flex-start;
 }
-.container .addTask .mark-imp input{
+
+.container .addTask .mark-imp input {
     height: 25px;
     width: 25px;
     margin-right: 20px;
-    
+
 }
-.container .addTask .mark-imp label{
+
+.container .addTask .mark-imp label {
     font-size: 25px;
-     font-family: aeonik;
+    font-family: aeonik;
     font-weight: 500;
 }
 
@@ -215,7 +219,7 @@ section.allelems {
     scrollbar-width: thin;
 }
 
-.allTask .task{
+.allTask .task {
     height: 90px;
     width: 100%;
     padding: 10px 30px;
@@ -226,17 +230,19 @@ section.allelems {
     justify-content: space-between;
     border-radius: 10px;
 }
- .task h5{
+
+.task h5 {
     font-size: 35px;
     font-weight: 700;
     color: var(--tri1);
     display: flex;
-    align-items:flex-start ;
+    align-items: flex-start;
     gap: 15px;
-     font-family: aeonik;
+    font-family: aeonik;
     font-weight: 500;
- }
- .task h5 span{
+}
+
+.task h5 span {
     background-color: red;
     color: var(--tri1);
     display: flex;
@@ -244,14 +250,17 @@ section.allelems {
     font-size: 15px;
     border-radius: 15px;
     padding: 3px 5px;
- }
-.task h5 span.true{
+}
+
+.task h5 span.true {
     opacity: 1;
 }
-.task h5 span.false{
+
+.task h5 span.false {
     opacity: 0;
 }
- .task button{
+
+.task button {
     background-color: green;
     border: none;
     border-radius: 10px;
@@ -260,10 +269,61 @@ section.allelems {
     font-size: 20px;
     font-weight: 500;
     margin: 10px 10px;
-     font-family: aeonik;
+    font-family: aeonik;
     font-weight: 500;
- }
+}
 
- .task button:active{
+.task button:active {
     scale: 0.95;
- }
+}
+
+.daily-planner-fullpage h1 {
+    font-size: 45px;
+    font-weight: 700;
+    font-family: aeonik;
+}
+
+.daily-planner-fullpage .day-planner {
+    height: 85%;
+    width: 100%;
+    background-color: var(--tri2);
+    margin-top: 50px;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap ;
+    overflow: auto;
+    flex-shrink: none;
+}
+
+.day-planner .day-planner-time {
+    height: 70px;
+    width: 49%;
+    background-color: var(--sec);
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 15px;
+    padding: 30px 50px;
+    margin-bottom: 20px;
+}
+
+.day-planner .day-planner-time p {
+    font-size: 20px;
+    position: absolute;
+    top: 8%;
+    left: 2%;
+
+}
+
+.day-planner .day-planner-time input {
+    width: 100%;
+    background-color: var(--sec);
+    outline: none;
+    border: none;
+    padding-top: 20px;
+    font-size: 25px;
+    color: var(--tri1);
+}
