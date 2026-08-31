@@ -593,3 +593,447 @@ header .header2 h4{
     font-weight: 700;
     font-size: 35px;
 }
+
+@media (max-width: 1100px) {
+
+    section.allelems {
+        padding: 25px;
+    }
+
+    .allelems header {
+        height: 320px;
+        padding: 30px;
+    }
+
+    header .header1 h1 {
+        font-size: 50px;
+    }
+
+    header .header1 h2 {
+        font-size: 30px;
+    }
+
+    header .header1 h4 {
+        font-size: 35px;
+    }
+
+    header .header2 h2 {
+        font-size: 40px;
+    }
+
+    header .header2 h3 {
+        font-size: 22px;
+    }
+
+    header .header2 h4 {
+        font-size: 25px;
+    }
+
+    .allfeatures {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .elems {
+        width: 100%;
+        height: 300px;
+    }
+
+    .to-do-list-fullpage .container {
+        height: auto;
+        min-height: 80%;
+    }
+
+    .to-do-list-fullpage .container .addTask {
+        width: 40%;
+    }
+
+    .to-do-list-fullpage .container .allTask {
+        width: 57%;
+    }
+
+    .motivational-fullpage .motivation-container {
+        width: 80%;
+        height: 450px;
+    }
+
+    .pomodoro-timer h1 {
+        font-size: 130px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    html,
+    body {
+        width: 100%;
+        min-height: 100%;
+        overflow-x: hidden;
+    }
+
+    section.allelems {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        padding: 15px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .allelems header {
+        width: 100%;
+        height: auto;
+        min-height: 400px;
+        margin-bottom: 25px;
+        padding: 25px 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30px;
+        border-radius: 15px;
+    }
+
+    header .header1,
+    header .header2 {
+        width: 100%;
+    }
+
+    header .header1 h1 {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    header .header1 h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    header .header1 h4 {
+        font-size: 28px;
+    }
+
+    header .header2 h2 {
+        font-size: 32px;
+    }
+
+    header .header2 h3 {
+        font-size: 18px;
+    }
+
+    header .header2 h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .allelems .allfeatures {
+        width: 100%;
+        display: grid !important;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .elems {
+        width: 100%;
+        height: 250px;
+        border-radius: 15px;
+    }
+
+    .elems h1 {
+        font-size: 25px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .fullElem {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        min-height: 100vh;
+        padding: 20px 15px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        z-index: 1000;
+    }
+
+    .fullElem > h1 {
+        font-size: 28px;
+        padding-right: 80px;
+    }
+
+    .fullElem .back {
+        top: 15px;
+        right: 15px;
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+
+    .to-do-list-fullpage .container {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+    }
+
+    .to-do-list-fullpage .container .addTask,
+    .to-do-list-fullpage .container .allTask {
+        width: 100%;
+        height: auto;
+    }
+
+    .to-do-list-fullpage .container .addTask {
+        padding: 0;
+    }
+
+    .to-do-list-fullpage .container .addTask form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .container .addTask form input {
+        width: 100%;
+        font-size: 18px;
+        padding: 12px 15px;
+    }
+
+    .container .addTask form textarea {
+        width: 100%;
+        height: 150px;
+        font-size: 18px;
+        padding: 12px 15px;
+    }
+
+    .container .addTask form button {
+        width: 100%;
+        font-size: 18px;
+        padding: 12px 15px;
+    }
+
+    .container .addTask .mark-imp {
+        align-items: center;
+        padding: 0 15px 15px;
+    }
+
+    .container .addTask .mark-imp input {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    .container .addTask .mark-imp label {
+        font-size: 18px;
+    }
+
+    .to-do-list-fullpage .container .allTask {
+        padding: 15px;
+        max-height: 500px;
+        overflow-y: auto;
+    }
+
+    .allTask .task {
+        width: 100%;
+        height: auto;
+        min-height: 80px;
+        padding: 12px 15px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .task h5 {
+        font-size: 17px;
+        max-width: 100%;
+        word-break: break-word;
+    }
+
+    .task h5 span {
+        font-size: 11px;
+    }
+
+    .task button {
+        width: 100%;
+        margin: 5px 0 0;
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .daily-planner-fullpage h1,
+    .motivational-fullpage h1,
+    .pomodoro-timer-fullpage h1 {
+        font-size: 28px;
+    }
+
+    .daily-planner-fullpage .day-planner {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        margin-top: 30px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        overflow: visible;
+    }
+
+    .day-planner .day-planner-time {
+        width: 100%;
+        height: 75px;
+        margin-bottom: 0;
+        padding: 25px 15px 5px;
+    }
+
+    .day-planner .day-planner-time p {
+        font-size: 13px;
+        top: 5px;
+        left: 15px;
+    }
+
+    .day-planner .day-planner-time input {
+        width: 100%;
+        font-size: 17px;
+        padding-top: 15px;
+    }
+
+    .motivational-fullpage .motivation-container {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        height: auto;
+        min-height: 400px;
+        margin: 30px auto;
+        border-radius: 25px;
+    }
+
+    .motivational-fullpage .motivation-container::after {
+        border-radius: 25px;
+        filter: blur(80px);
+    }
+
+    .motivational-fullpage .motivation-container .motivation-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        min-height: 400px;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .motivation-wrapper .motivation-1 h2 {
+        font-size: 18px;
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .motivation-wrapper .motivation-2 h1 {
+        font-size: 23px;
+        line-height: 1.4;
+        padding: 10px 0;
+    }
+
+    .motivation-wrapper .motivation-3 h2 {
+        font-size: 18px;
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .pomodoro-timer-fullpage .pomodoro-timer {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .pomodoro-timer h1 {
+        font-size: 70px;
+    }
+
+    .pomodoro-timer button {
+        font-size: 18px;
+        padding: 12px 20px;
+        margin: 5px;
+    }
+
+    .pomodoro-timer-fullpage .session {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: fit-content;
+        max-width: 90%;
+        margin: 30px auto;
+        padding: 12px 18px;
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+
+    section.allelems {
+        padding: 10px;
+    }
+
+    .allelems header {
+        min-height: 350px;
+        padding: 20px 15px;
+    }
+
+    header .header1 h1 {
+        font-size: 28px;
+    }
+
+    header .header1 h2 {
+        font-size: 19px;
+    }
+
+    header .header1 h4 {
+        font-size: 24px;
+    }
+
+    header .header2 h2 {
+        font-size: 27px;
+    }
+
+    header .header2 h3 {
+        font-size: 16px;
+    }
+
+    header .header2 h4 {
+        font-size: 18px;
+    }
+
+    .elems {
+        height: 220px;
+    }
+
+    .elems h1 {
+        font-size: 21px;
+    }
+
+    .fullElem {
+        padding: 15px 10px;
+    }
+
+    .fullElem > h1 {
+        font-size: 23px;
+    }
+
+    .pomodoro-timer h1 {
+        font-size: 55px;
+    }
+
+    .pomodoro-timer button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
