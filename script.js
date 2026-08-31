@@ -223,7 +223,7 @@ function weather() {
 
 
     let city = 'Indore'
-    let apiKey = 'a37515d6308b42b481b181751263108'
+    let apiKey = null
     let data = null
 
 
