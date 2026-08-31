@@ -166,7 +166,7 @@ function pomodoro() {
                     session.style.backgroundColor = 'blue'
                     totalSeconds = 5 * 60
                 }
-            }, 5);
+            }, 1000);
         }
         else {
             timeInterval = setInterval(() => {
@@ -182,7 +182,7 @@ function pomodoro() {
                     session.style.backgroundColor = 'green'
                     totalSeconds = 25 * 60;
                 }
-            }, 5);
+            }, 1000);
         }
     }
 
@@ -209,3 +209,65 @@ function pomodoro() {
 }
 
 pomodoro()
+
+function weather() {
+
+    let header1Time = document.querySelector('.header1 h1')
+    let header1Date = document.querySelector('.header1 h2')
+    let header1City = document.querySelector('.header1 h4')
+    let header2Temp = document.querySelector('.header2 h2')
+    let forecast = document.querySelector('.header2 h4')
+    let heat = document.querySelector('.header2 .heat')
+    let humidity = document.querySelector('.header2 .humidity')
+    let wind = document.querySelector('.header2 .wind')
+
+
+    let city = 'Indore'
+    let apiKey = 'a37515d6308b42b481b181751263108'
+    let data = null
+
+
+    async function weatherAPI() {
+        var response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
+        data = await response.json()
+        console.log(data);
+
+        header1City.innerHTML = `${data.location.name} (${data.location.region})`
+        header2Temp.innerHTML = `${data.current.temp_c}°C`
+        forecast.innerHTML = `${data.current.condition.text}`
+        heat.innerHTML = `Heat Index:${data.current.heatindex_c}°C`
+        humidity.innerHTML = `Humidity: ${data.current.humidity}%`
+        wind.innerHTML = `Wind: ${data.current.wind_kph}Km/h`
+    }
+    weatherAPI()
+
+    function getTime() {
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const totalMonths = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+        var date = new Date()
+        var day = daysOfWeek[date.getDay()]
+        var hours = date.getHours()
+        var minutes = date.getMinutes()
+        var seconds = date.getSeconds()
+        var tarik = date.getDate()
+        var month = totalMonths[date.getMonth()]
+        var year = date.getFullYear()
+
+        if (hours > 12) {
+            header1Time.innerHTML = `${day}, ${String(hours - 12).padStart('2', '0')}:${String(minutes).padStart('2', '0')}:${String(seconds).padStart('2', '0')} PM`
+        }
+        else {
+            header1Time.innerHTML = `${day}, ${String(hours).padStart('2', '0')}:${String(minutes).padStart('2', '0')}:${String(seconds).padStart('2', '0')} AM`
+        }
+
+        header1Date.innerHTML = `${tarik} ${month} ${year}`
+
+
+    }
+    setInterval(() => {
+        getTime()
+    }, 1000);
+}
+weather()
