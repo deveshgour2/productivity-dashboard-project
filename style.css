@@ -328,11 +328,6 @@ section.allelems {
     color: var(--tri1);
 }
 
-.motivational-fullpage {
-    display: block;
-
-}
-
 .motivational-fullpage h1 {
     font-size: 45px;
     font-weight: 700;
@@ -341,7 +336,7 @@ section.allelems {
 
 .motivational-fullpage .motivation-container {
     height: 500px;
-    width: 700px;
+    width: 1000px;
     background-color: var(--tri2);
     position: absolute;
     top: 50%;
@@ -411,4 +406,52 @@ section.allelems {
     background-color: var(--sec);
     padding: 20px;
     border-radius: 20px;
+}
+
+
+.pomodoro-timer-fullpage h1 {
+    font-size: 45px;
+    font-weight: 700;
+    font-family: aeonik;
+}
+
+.pomodoro-timer-fullpage .pomodoro-timer{
+    position: absolute;
+    top:45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.pomodoro-timer h1{
+    font-size: 170px;
+}
+
+.pomodoro-timer button{
+    background-color: var(--tri2);
+    border: none;
+    border-radius: 5px;
+    font-size: 35px;
+    padding: 20px 35px;
+    margin: 10px;
+    color: var(--tri1);
+    transition: all ease 0.3s;
+    box-shadow: 7px 7px 0 var(--sec);
+}
+
+.pomodoro-timer button:active{
+    box-shadow: 0px 0px 0 var(--sec);
+}
+
+.pomodoro-timer-fullpage .session{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-color: green;
+    padding: 20px 25px;
+    border-radius: 10px;
+    color: var(--tri1);
+    font-weight: 700;
+    font-size: 35px;
 }

@@ -129,3 +129,83 @@ function motivationalQuotes() {
 }
 
 motivationalQuotes()
+
+function pomodoro() {
+
+    let timer = document.querySelector('.pomodoro-timer h1')
+    let startBtn = document.querySelector('.pomodoro-timer .start')
+    let pauseBtn = document.querySelector('.pomodoro-timer .pause')
+    let resetBtn = document.querySelector('.pomodoro-timer .reset')
+    let session = document.querySelector('.pomodoro-timer-fullpage .session')
+
+    let timeInterval = null
+    let totalSeconds = 25 * 60
+    let isWorkSession = true
+
+    function updateTimer() {
+        let minutes = Math.floor(totalSeconds / 60)
+        let seconds = Math.floor(totalSeconds % 60)
+        timer.innerHTML = `${String(minutes).padStart('2', '0')}:${String(seconds).padStart('2', '0')}`
+    }
+
+    function startTimer() {
+        clearInterval(timeInterval)
+
+        if (isWorkSession) {
+
+            timeInterval = setInterval(() => {
+                if (totalSeconds > 0) {
+                    totalSeconds--
+                    updateTimer()
+                }
+                else {
+                    isWorkSession = false
+                    clearInterval(timeInterval)
+                    timer.innerHTML = '05:00'
+                    session.innerHTML = 'Break Session'
+                    session.style.backgroundColor = 'blue'
+                    totalSeconds = 5 * 60
+                }
+            }, 5);
+        }
+        else {
+            timeInterval = setInterval(() => {
+                if (totalSeconds > 0) {
+                    totalSeconds--
+                    updateTimer()
+                }
+                else {
+                    isWorkSession = true
+                    clearInterval(timeInterval)
+                    timer.innerHTML = '25:00'
+                    session.innerHTML = 'Work Session'
+                    session.style.backgroundColor = 'green'
+                    totalSeconds = 25 * 60;
+                }
+            }, 5);
+        }
+    }
+
+    function pauseTimer() {
+        clearInterval(timeInterval)
+    }
+
+    function resetTimer() {
+        clearInterval(timeInterval)
+        if (isWorkSession === true) {
+            totalSeconds = 25 * 60
+        }
+        else {
+            totalSeconds = 5 * 60
+        }
+        updateTimer()
+    }
+
+    startBtn.addEventListener('click', startTimer)
+    pauseBtn.addEventListener('click', pauseTimer)
+    resetBtn.addEventListener('click', resetTimer)
+
+
+}
+
+pomodoro()
